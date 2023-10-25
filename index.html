@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domowy budżet</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header bgGreenGradient">
+      <div class="container">
+        <div class="logoBox">
+          <img class="logoImage" src="./images/logo-home-budget.svg" alt="" />
+          <h3 class="logoTitle">Domowy budżet</h3>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="container mainContainer">
+        <div class="summaryBox bgBox textCenter">
+          <h2 class="h2Title">Podsumowanie</h2>
+          <p id="balanceMessage"></p>
+        </div>
+        <div class="flexConstainer">
+          <div class="income bgBox">
+            <h2 class="h2Title">Przychody</h2>
+            <div class="form">
+              <div class="col">
+                <input
+                  type="text"
+                  id="incomeName"
+                  placeholder="Nazwa przychodu"
+                />
+              </div>
+              <div class="col">
+                <input type="number" id="incomeAmount" placeholder="Kwota" />
+              </div>
+              <button class="addBtn" onclick="addIncome()">
+                Dodaj Przychód
+              </button>
+            </div>
+
+            <div class="list">
+              <h2>Lista przychodów</h2>
+              <ul id="incomeList"></ul>
+              <p>
+                Suma przychodów: <span id="totalIncome" class="bold"></span> PLN
+              </p>
+            </div>
+          </div>
+          <div class="expense bgBox">
+            <h2 class="h2Title">Koszty</h2>
+            <div class="form">
+              <div class="col">
+                <input
+                  type="text"
+                  id="expenseName"
+                  placeholder="Nazwa wydatku"
+                />
+              </div>
+              <div class="col">
+                <input type="number" id="expenseAmount" placeholder="Kwota" />
+              </div>
+              <button class="addBtn" onclick="addExpense()">
+                Dodaj Wydatek
+              </button>
+            </div>
+            <div class="list">
+              <h2>Lista wydatków</h2>
+              <ul id="expenseList"></ul>
+              <p>
+                Suma wydatków: <span id="totalExpense" class="bold"></span> PLN
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
